@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusGuard | Productivity Tracker</title>
+    <!-- Add Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FocusGuard</h1>
+            <p>Track your productivity and block distractions.</p>
+        </header>
+
+        <!-- Productivity Tracker -->
+        <main class="card tracker-section">
+            <h2>Time Spent Productive Today</h2>
+            <div class="timer-display" id="time-display">00:00:00</div>
+            
+            <div class="controls">
+                <button id="start-btn" class="btn-primary">Start Timer</button>
+                <button id="stop-btn" class="btn-danger" disabled>Stop Timer</button>
+                <button id="reset-btn" class="btn-secondary">Reset</button>
+            </div>
+        </main>
+
+        <!-- Content Blocker Simulation -->
+        <section class="card blocker-section">
+            <h2>Website Blocker Simulation</h2>
+            <p style="margin-bottom: 1rem; color: var(--text-muted);">Try visiting youtube.com or instagram.com to see the blocker in action.</p>
+            
+            <div class="browser-bar">
+                <input type="text" id="url-input" placeholder="Enter URL (e.g., youtube.com)">
+                <button id="browse-btn" class="btn-primary">Go</button>
+            </div>
+
+            <div id="browser-content" class="browser-content">
+                <p style="color: var(--text-muted)">Enter a URL above to test blocking</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Note: module type is critical for ES6 imports -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
